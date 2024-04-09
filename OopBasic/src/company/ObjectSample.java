@@ -3,6 +3,7 @@ package company;
 public class ObjectSample {
 
     public static void main(String[] args) {
+        
         // インスタンス作成
         
       var department = new Department("営業部", "xx", 1000000);
@@ -23,13 +24,14 @@ public class ObjectSample {
         System.out.println("");
         
         //インスタンスの作成
-        var devdepartment= new Department("開発部","yy",0);
-        var engineer = new Employee("田中",devdepartment , "一般社員", 88);
+        var devDepartment= new Department("開発部","yy",0);
+        var engineer = new Engineer("田中",devDepartment , "一般社員", 88,"Java");
         
                 
         //インスタンスメソッドの呼び出し
         engineer.report();
         engineer.joinMeeting();
+        engineer.developSoftware();
         
                 
         

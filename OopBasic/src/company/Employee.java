@@ -35,6 +35,13 @@ public class Employee {
         department.meeting();
         System.out.println("→上記の会議に参加します。部署：" + department.getName() + "名前：" + name);    
     }
+
+
+
+    public void developSoftware() {
+        // TODO 自動生成されたメソッド・スタブ
+        
+    }
         
         
     }
