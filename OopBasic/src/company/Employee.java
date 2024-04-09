@@ -3,19 +3,20 @@ package company;
 import java.security.PublicKey;
 
 public class Employee {
-    //field
-    String name;
-    String department;
-    String position;
-    int employeeId;
+    //フィールド
+   protected final String name;
+   private final Department department; // Department型に変更
+   private final String position;
+   private final int employeeId;
     
     //コンストラクター
-    public Employee(String name, String department, String position, int employeeid) {
+    public Employee(String name,Department department,String position,int employeeid) {
         this.name=name;
         this.department=department;
         this.position=position;
-        this.employeeId=employeeid;
-    }
+        this.employeeId=employeeid;}
+    
+    
     
     //報告メソッド
     public void report(int times) {
@@ -23,12 +24,17 @@ public class Employee {
     }
     
     
-    //報告メソッド
+    //報告メソッド(オーバーロード）
         public void report() {
             report(1);
             
         }
-        
+    
+    //会議に参加するメソッド
+    public void joinMeeting(){
+        department.meeting();
+        System.out.println("→上記の会議に参加します。部署：" + department.getName() + "名前：" + name);    
+    }
         
         
     }
